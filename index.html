@@ -1,8 +1,10 @@
 <html>
 <head>
+<meta property="fb:use_automatic_ad_placement" content="true">
 
 <script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
-
+<script defer src="https://accounts.google.com/gsi/client" ></script> 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <script type="text/javascript" charset="utf-8">
   (function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
@@ -13,59 +15,42 @@
 
 <body>
 
+<p>Page Content</p>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0eqXumLtQHEhJrYbm3aQ6yquC4MRFdrKiSJ7Y9UtzngJWDh51obKCWKmmMfsvqNRSl%26id%3D100088442078422&show_text=false&width=500" width="500" height="419" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+
 <div id="afscontainer1"></div>
 
 <script type="text/javascript" charset="utf-8">
 
 var pageOptions = {
-  'pubId' : 'pub-6607653375286321', // Enter your own client-ID here
-  'query' : 'flowers', // User query for this page
-  'styleId': '7824176615' // Enter your own style ID here
-  'resultsPageBaseUrl': 'https//malickgalant.github.io/webinclone/', // Enter your own base URL here
-   'resultsPageQueryParam': ' a=v1&b=v2 ' // Enter your own query parameter here
- };
-var adblock1 = {
-  'container' : 'afscontainer1',
-  'width' : 700
+  'pubId': 'test client ID', // Enter your own client-ID here
+  'relatedSearchTargeting': 'content', // Must use 'content'
+  'hl': 'en', // The preferred language for related terms (default to 'en' if not specified)
+  'styleId': '1234567890', // Enter your style ID
+  'resultsPageBaseUrl': '//www.example.com/search', // Enter the base URL of your results page
+  'resultsPageQueryParam': 'query', // Specify the query parameter on your results page
+  'terms': 'term a,term b', // Optionally provide your own related terms in a comma-delimited list
+  'referrerAdCreative': 'example ad title' // Only used when a user clicked an ad to arrive here
 };
 
-var adblock2 = {
-  'container' : 'afscontainer2',
-  'width' : 700
+var rsblock1 = {
+  'container': 'afscontainer1',
+  'relatedSearches': 6,
+  'width': 500
 };
 
-_googCsa('ads', pageOptions, adblock1, adblock2);
+_googCsa('relatedsearch', pageOptions, rsblock1);
 </script>
 
-<!-- COOKIE DIALOG HTML (cookieConsent.html) This doesn't have to be here but cookieConsent.html can be inserted instead. For test without apache server it's here directly so browser doesn't block content from another html due to CORS policies. --> <div id="cookieConsentDialog"> <div class="cookieDialog">
+<p>More page content</p>
 
 
 
-<div class="content">
- <h1>Maliek News</h1>
+<script> function handleCredentialResponse(response) { console.log("Encoded JWT ID token: " + response.credential); ... } window.onload = function () { google.accounts.id.initialize({ client_id: "513009225193-857p907lo1j2jgf6upo8hlam45cc5m60.apps.googleusercontent.com", callback: handleCredentialResponse }); google.accounts.id.renderButton( document.getElementById("g_id_signin"), { theme: "outline", size: "large" } // customization attributes ); google.accounts.id.prompt(); // also display the One Tap dialog } </script>
 
-
-<p>Search result 1</p>
-<p>Search result 2</p>
-<p>Search result 3</p>
-
-                      <p> Penatibus molestie gravida velit mauris duis nullam hac sem tempor viverra vivamus. Enim primis cras quisque magna dis porttitor nec. Phasellus non hendrerit porttitor natoque rutrum platea feugiat velit sociosqu aliquam donec ipsum. Suspendisse donec elit hac. Nam viverra mattis nostra! Taciti convallis, erat vestibulum pellentesque pellentesque etiam habitant tempor ut et massa. Malesuada, phasellus fermentum luctus. </p>
-                      <p> Mauris placerat sodales habitasse. Etiam lectus porta tempus. Cras scelerisque donec tempus quisque vel inceptos convallis non enim. Posuere congue id pulvinar risus elementum netus scelerisque? Mattis quis facilisi nisi mattis non euismod senectus phasellus felis. Congue pretium justo torquent suspendisse penatibus nec. Sociis habitant inceptos conubia odio ante tellus inceptos vel integer congue. Ornare viverra nascetur mi ultrices netus ridiculus. </p>
-                      <p> Id vel etiam, varius aliquam elit inceptos viverra natoque volutpat sapien tortor ac? Porttitor enim donec dapibus pretium lobortis, molestie est interdum vitae. Risus suscipit, faucibus primis convallis. Varius vulputate a vestibulum! Quam fames adipiscing ridiculus commodo felis pulvinar suspendisse? Augue ac sagittis feugiat habitant ad enim. Ornare placerat tempus fames fringilla aliquam maecenas nisl bibendum eros. </p>
-                      <p> Dolor habitasse ultrices faucibus venenatis magnis! Vitae taciti consectetur, lectus ornare lacus platea leo tortor ad donec netus vel. Ornare sed nibh gravida duis mauris vivamus cum volutpat convallis. Volutpat maecenas fusce, dictum torquent integer. Dui lorem eleifend nisl parturient quis eget. Posuere, rutrum vel vulputate dictumst phasellus sit luctus ridiculus velit duis. Odio placerat euismod, sagittis eu imperdiet. Venenatis sem vitae pharetra sit senectus ipsum commodo sociis bibendum. Auctor imperdiet mauris feugiat tempus elit leo curabitur ipsum sollicitudin. Tempus ac sagittis! </p> 
-                      <p> Accumsan morbi conubia potenti porta, bibendum nullam. Sit morbi sollicitudin conubia dictumst ultrices. Iaculis tristique nibh nascetur sapien fringilla? Himenaeos fringilla libero rutrum mus, leo tincidunt nam. Urna varius sed nascetur etiam montes. Fermentum nisi sollicitudin taciti potenti. Dapibus eget aptent augue vivamus hendrerit. Eu nam mollis potenti dictumst, himenaeos class? Vivamus tempus sagittis id risus rhoncus. Cubilia nec netus rhoncus suscipit curae; velit.
-                     </p>
-
- 
- <a href="#" class="showCookieDialog">Cookie Consent</a> </div>                    
-<script type="text/javascript" src="cookie.js"></script> 
-
-
-
-
-
-
-<div id="afscontainer2"></div>
+<div id="g_id_signin"></div>
 
  </body>
  </html>
