@@ -1,69 +1,95 @@
-<!DOCTYPE html>
 <html>
+<head>
+  <title>Google AdSense 250x300</title>
 
-<!--
-Copyright 2011 Google Inc.
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
-<!--
-This example gets all ad units in an ad client. To get ad clients, run
-GetAllAdClients.html.
-Tags: adunits.list
-Author silvano.luciani@gmail.com (Silvano Luciani)
--->
-  <head>
-  <title>Get all ad units.</title>
-  <script type="text/javascript" src="auth.js"></script>
-  </head>
-  <body>
-    <h1>Ad unit blog</h1>
-
-    <div id="content"></div>
-
-    <!-- Add a button for the user to click to initiate auth sequence -->
-    <button id="authorize-button" style="visibility: hidden">Authorize</button>
-
-    <script type="text/javascript">
-    var adClientId = '513009225193-857p907lo1j2jgf6upo8hlam45cc5m60.apps.googleusercontent.com';
-
-    // Gets and renders the data.
-    function makeApiCall() {
-      gapi.client.load('adsense', 'v1.1', function() {
-        var request = gapi.client.adsense.adunits.list({
-          'adClientId': adClientId,
-          'maxResults': '5000'
-        });
-        request.execute(function(resp) {
-          var unitsList = document.createElement('ol');
-          var itemsTotal = resp.items.length;
-          for (var key = 0; key < itemsTotal; key++) {
-            var unit = resp.items[key];
-            addUnit(unitsList, unit)
-          }
-          document.getElementById('content').appendChild(unitsList);
-        });
-      });
+  <style>
+    body {
+      background-color:transparent;
+      font-family:verdana,arial,sans-serif;
+    }
+      
+    #ads {
+      left: 0;
+      position: absolute;
+      top: 0;
+      background-color:#ffffff;
+      height:250px;
+      width:300px;
     }
 
-    // Formats one line of the ad units list.
-    function addUnit(unitsList, unit) {
-      var label = document.createElement('li');
-      var labelString = document.createTextNode(
-          'Ad unit with code "' + unit.code + '", name "' + unit.name +
-          '"and status "' + unit.status + '" was found.');
-      label.appendChild(labelString);
-      unitsList.appendChild(label);
+    #ads ul {
+      list-style: none;
     }
-    </script>
-    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-  </body>
+
+    #ads ul li {
+      clear: both;
+      float: left;
+      line-height: 0;
+      padding: 1px 4px;
+      overflow: hidden;
+      text-align: left;
+      width: 292px;
+      height: 81px;
+    }
+
+    .adc {
+      height: 81px;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    .adt {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .adb {
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .adu {
+      font-size: 10px;
+      line-height: 1.2;
+      overflow: hidden;
+      text-decoration: underline;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .adus {
+      cursor: pointer;
+    }
+    
+    .attribution li {float:right;height:18px;}
+  </style>
+
+</head>
+
+<body>
+  <div id="ads">
+    <ul id="ads0">
+      <li id="taw0" onfocus="ss('','aw0')" onmouseover="ss('','aw0')">
+        <div class="ad">
+          <table border="0" cellpadding="0" cellspacing="0" class="adc">
+            <tbody>
+              <tr>
+                <td valign="middle">
+                  <a class="adt" href="#" id="aw0" onclick="ha('aw0')" onfocus="ss('','aw0')"onmousedown="st('aw0')" onmouseover="return ss('','aw0')" target="_top" title= "www.easy-forex.com/Forex-Trading"><span>Easy-Truck Trading</span></a>
+
+                  <div class="adb">
+                    <span class="adbs" id="baw0">Start live trading from just $25! Simply register &amp; deposit today.</span>
+                  </div>
+
+                  <div class="adu">
+                    <span class="adus" id="uaw0" onclick="ga(this,event)" onmousedown="st(this.id.substr(1))" title="www.easy-truck.com">www.easy-truck.com</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+</body>
 </html>
